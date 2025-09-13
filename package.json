@@ -1,0 +1,20 @@
+{
+  "name": "quicklink-platform",
+  "version": "1.0.0",
+  "description": "Multi-Service Platform: Marketplace, Taxi, Errands, Properties",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
